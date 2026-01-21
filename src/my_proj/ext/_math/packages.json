@@ -1,0 +1,7 @@
+{
+  "curl": {
+    "build": ["libcurl4-openssl-dev"],
+    "runtime": ["libcurl4"],
+    "pkg_config": ["libcurl"]
+  }
+}

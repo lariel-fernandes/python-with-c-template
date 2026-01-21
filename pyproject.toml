@@ -1,0 +1,82 @@
+
+[build-system]
+requires = ["setuptools", "wheel", "numpy~=2.0", "torch~=2.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-proj"
+version = "0.1.0"
+requires-python = ">=3.12,<4"
+
+dependencies = [
+    "numpy ~=2.0",
+    "torch ~=2.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest           >=8.0",
+    "pytest-benchmark >=5.2",
+    "setuptools       >=80.9",
+    "pybind11-stubgen >=2.5",
+]
+
+[tool.uv]
+reinstall-package = ["my-proj"]
+python-preference = "only-managed"
+
+# === Ruff ========================================================================================
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+extend-include = []
+exclude = [
+    "examples/",
+    "notebooks/",
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "jupyter_lab_config.py",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint]
+exclude = ["src/tests/*"]
+fixable = ["ALL"]
+unfixable = []
+select = [
+    "F",   # Pyflakes
+    #    "D",   # pydocstyle
+    "E",   # Errors
+    "W",   # Warning
+    "TCH", # Typecheck
+    "TID",
+    "SIM",
+]
+ignore = [
+    "E501",  # Line too long
+    "E731",  # Do not assign a lambda expression, use a def
+]

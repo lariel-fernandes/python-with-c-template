@@ -1,0 +1,23 @@
+# Python virtual environment
+.venv/
+
+# Python build artifacts (but keep build/ directory which is used by Docker)
+src/*.egg-info/
+dist/
+*.egg-info/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# C extension build artifacts
+*.so
+*.pyd
+*.o
+*.dll
+*.dylib
+*.a
+
+# IntelliJ
+.idea

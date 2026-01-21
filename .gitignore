@@ -1,0 +1,31 @@
+.claude
+.benchmarks
+
+# Python virtual environment
+.venv/
+
+# Build artifacts
+src/*.egg-info/
+dist/
+build/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# C extension build artifacts
+*.so
+*.pyd
+*.o
+*.dll
+*.dylib
+*.a
+
+# CMake (for CLion IDE support only)
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+
+# IntelliJ
+.idea

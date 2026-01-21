@@ -1,0 +1,2 @@
+include setup.py
+recursive-include src *.h *.c *.cpp *.cu packages.json
